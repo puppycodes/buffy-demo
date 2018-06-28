@@ -1,10 +1,39 @@
 .header {
+@include position(fixed, 22px 0px 0 0px);
+width: 90%;
+margin: auto;
 
+font-size: 18px;
+.flex-grid {
+  display: flex;
+    justify-content: space-between;
 }
-.logo {
-  margin: auto;
-  @include position(fixed, 0 0 0 50%);
-  img {
-    width: 100px;
+.col {
+  flex: 1;
+}
+
+  .logo {
+    text-align: center;
+    img {
+      width: 100px;
+    }
   }
+
+  .nav {
+    @include position(relative);
+    ul {
+      padding: 0;
+      margin: 0;
+    }
+    li {
+      float: left;
+      margin-right: 30px;
+    }
+  }
+
+  .cart {
+      @include position(relative);
+      text-align: right;
+  }
+
 }
