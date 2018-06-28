@@ -1,0 +1,10 @@
+.header {
+
+}
+.logo {
+  margin: auto;
+  @include position(fixed, 0 0 0 50%);
+  img {
+    width: 100px;
+  }
+}
