@@ -21,14 +21,68 @@ font-size: 18px;
 
   .nav {
     @include position(relative);
-    ul {
+
+    ul.products {
+      opacity: 0;
+      z-index: 10;
+      position: relative;
+    }
+
+    ul.nav-links:hover {
+      height: 350px;
+
+      ~ ul.products{
+
+        -webkit-transition: opacity .5s;
+        -moz-transition: opacity .5s;
+        -ms-transition: opacity .5s;
+        -o-transition: opacity .5s;
+        transition: opacity .5s;
+
+        opacity: 1;
+      }
+
+      ul.products:hover ~ ul.nav-links {
+
+        -webkit-transition: opacity .5s;
+        -moz-transition: opacity .5s;
+        -ms-transition: opacity .5s;
+        -o-transition: opacity .5s;
+        transition: opacity .5s;
+
+        opacity: 1;
+      }
+
+    }
+
+
+    ul.nav-links {
       padding: 0;
       margin: 0;
+      @include position(fixed, 0px 0 0 0px);
+      width: 350px;
+      z-index: 10;
+      background-color: #73E0A3;
+
+      height: 0;
+
+      -webkit-transition: height .5s;
+      -moz-transition: height .5s;
+      -ms-transition: height .5s;
+      -o-transition: height .5s;
+      transition: height .5s;
+
+      li {
+        float: left;
+        text-align: center;
+        font-weight: 200;
+        padding-top: 22px;
+      }
     }
-    li {
-      float: left;
-      margin-right: 30px;
-    }
+
+
+
+
   }
 
   .cart {

@@ -3,7 +3,7 @@
     src: url('../fonts/CircularStd-Bold.woff2') format('woff2'),
         url('../fonts/CircularStd-Bold.woff') format('woff');
     font-weight: bold;
-    font-style: normal;
+    font-style: oblique;
 }
 
 @font-face {
@@ -19,13 +19,13 @@
     src: url('../fonts/CircularStd-Black.woff2') format('woff2'),
         url('../fonts/CircularStd-Black.woff') format('woff');
     font-weight: 900;
-    font-style: normal;
+    font-style: oblique;
 }
 
 @font-face {
-    font-family: 'Circular Std Book';
+    font-family: 'Circular Std';
     src: url('../fonts/CircularStd-Book.woff2') format('woff2'),
         url('../fonts/CircularStd-Book.woff') format('woff');
-    font-weight: normal;
+    font-weight: 200;
     font-style: normal;
 }
