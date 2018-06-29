@@ -219,7 +219,6 @@ module.exports = function(grunt) {
     'autoprefixer:dist',
     'cssmin:dist',
     'clean:dist',
-    'uglify',
     'usebanner'
   ]);
 
