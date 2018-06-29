@@ -1,89 +1,91 @@
 .header {
-@include position(fixed, 22px 0px 0 0px);
-width: 90%;
-margin: auto;
+  @include position(fixed, 22px 0px 0 0px);
+  width: 90%;
+  margin: auto;
 
-font-size: 18px;
-.flex-grid {
-  display: flex;
-    justify-content: space-between;
-}
-.col {
-  flex: 1;
-}
+  font-size: 18px;
+  .flex-grid {
+    display: flex;
+      justify-content: space-between;
+  }
+  .col {
+    flex: 1;
+  }
 
   .logo {
     text-align: center;
-    img {
-      width: 100px;
+      img {
+        width: 100px;
+      }
     }
-  }
+
 
   .nav {
     @include position(relative);
 
-    ul.products {
-      opacity: 0;
-      z-index: 10;
-      position: relative;
-    }
+      ul.nav-links:hover > .products {
 
-    ul.nav-links:hover {
-      height: 350px;
 
-      ~ ul.products{
+       -webkit-transition: opacity .5s .2s ease;
+       -moz-transition: opacity .5s .2s ease;
+       -ms-transition: opacity .5s .2s ease;
+       -o-transition: opacity .5s .2s ease;
+       transition: opacity .5s .2s ease;
 
-        -webkit-transition: opacity .5s;
-        -moz-transition: opacity .5s;
-        -ms-transition: opacity .5s;
-        -o-transition: opacity .5s;
-        transition: opacity .5s;
-
-        opacity: 1;
+       opacity: 1 !important;
       }
 
-      ul.products:hover ~ ul.nav-links {
+      .products {
+       opacity: 0;
+       z-index: 10;
+       margin-left: 39px;
+       margin-top: 30px;
+       position: relative;
 
-        -webkit-transition: opacity .5s;
-        -moz-transition: opacity .5s;
-        -ms-transition: opacity .5s;
-        -o-transition: opacity .5s;
-        transition: opacity .5s;
+       .item {
+         margin-bottom: 20px;
+       }
 
-        opacity: 1;
+       a {
+         clear: both;
+         font-size: 35px;
+
+         .description {
+           font-size: 18px;
+         }
+       }
+
+
       }
 
-    }
+       ul.nav-links:hover {
+         height: 350px;
+       }
 
+      ul.nav-links {
+        padding: 0;
+        margin: 0;
+        @include position(fixed, 0px 0 0 0px);
+        width: 350px;
+        z-index: 10;
+        background-color: #73E0A3;
 
-    ul.nav-links {
-      padding: 0;
-      margin: 0;
-      @include position(fixed, 0px 0 0 0px);
-      width: 350px;
-      z-index: 10;
-      background-color: #73E0A3;
+        height: 0;
 
-      height: 0;
+        -webkit-transition: height .5s;
+        -moz-transition: height .5s;
+        -ms-transition: height .5s;
+        -o-transition: height .5s;
+        transition: height .5s;
 
-      -webkit-transition: height .5s;
-      -moz-transition: height .5s;
-      -ms-transition: height .5s;
-      -o-transition: height .5s;
-      transition: height .5s;
-
-      li {
-        float: left;
-        text-align: center;
-        font-weight: 200;
-        padding-top: 22px;
+        li {
+          float: left;
+          text-align: center;
+          font-weight: 200;
+          padding-top: 22px;
+        }
       }
     }
-
-
-
-
-  }
 
   .cart {
       @include position(relative);
