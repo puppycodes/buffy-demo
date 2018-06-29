@@ -12,16 +12,22 @@
     <link href="//ajax.googleapis.com" rel="dns-prefetch">
     <link href="assets/css/style.min.css" rel="stylesheet">
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.6.2/rellax.min.js"></script>
 
   </head>
   <body>
 
-    <div class="splash"></div>
+    <div id="overlay"></div>
+
+    <div class="splash">
+      <div class="tagline">Nature has never been fluffier.</div>
+    </div>
 
     <header class="header" role="banner">
       <div class="flex-grid">
         <nav class="col nav" role="navigation">
-          <ul class="nav-links">
+
+          <ul id="navigation" class="nav-links">
             <div class="flex-grid">
               <li class="col">
                 <a href="#">Shop</a>
@@ -33,20 +39,18 @@
                 <a href="#">Blog</a>
               </li>
             </div>
-
             <div class="products">
-              <div class="item">
+              <div id="item" class="item active">
                 <a href="#cloud">buffy cloud
                 <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
                 </a>
               </div>
-              <div class="item">
+              <div id="item" class="item">
                 <a href="#natural">buffy natural
                 <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
                 </a>
               </div>
             </div>
-
           </ul>
 
         </nav>
@@ -64,6 +68,26 @@
     </header>
 
     <main class="main" role="main">
+    <section class="botanic">
+      <div class="rellax">
+        <div class="caption">The Botanic is 100% plant-based from nature.</div>
+        <div class="product-image"><img src="assets/img/botanic.jpg"></div>
+          <div class="caption small">Made from 100% Eucalyptus. $120 — $190</div>
+          <button>Shop Now</button>
+      </div>
+    </section>
+
+    <section class="cloud">
+
+          <div class="caption">
+            The Cloud is
+            unbelievably soft
+            and fluffy.
+          </div>
+
+            <button>Try free for 30 days</button>
+
+    </section>
 
     </main>
 

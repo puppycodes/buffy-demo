@@ -1,7 +1,31 @@
+#overlay {
+  -webkit-transition: opacity .5s ease;
+  -moz-transition: opacity .5s ease;
+  -ms-transition: opacity .5s ease;
+  -o-transition: opacity .5s ease;
+  transition: opacity .5s ease;
+
+  opacity: 0;
+
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  background-color: white;
+}
+
+#overlay.active {
+  opacity: .5;
+  z-index: 1;
+}
+
 .header {
   @include position(fixed, 22px 0px 0 0px);
   width: 90%;
   margin: auto;
+  z-index: 20;
 
   font-size: 18px;
   .flex-grid {
@@ -24,15 +48,13 @@
     @include position(relative);
 
       ul.nav-links:hover > .products {
-
-
        -webkit-transition: opacity .5s .2s ease;
        -moz-transition: opacity .5s .2s ease;
        -ms-transition: opacity .5s .2s ease;
        -o-transition: opacity .5s .2s ease;
        transition: opacity .5s .2s ease;
 
-       opacity: 1 !important;
+       opacity: 1;
       }
 
       .products {
@@ -44,6 +66,16 @@
 
        .item {
          margin-bottom: 20px;
+         opacity: 0.1;
+
+       }
+
+       .item.active {
+         opacity: 1;
+       }
+
+       .item:hover {
+         opacity: 1;
        }
 
        a {
@@ -52,6 +84,7 @@
 
          .description {
            font-size: 18px;
+
          }
        }
 

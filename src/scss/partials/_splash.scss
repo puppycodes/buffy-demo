@@ -1,0 +1,22 @@
+.splash {
+  height: 80vh;
+  width: 100%;
+  position: relative;
+  left: 0;
+  top: 0;
+  background-image: url('../img/header.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+}
+
+.tagline {
+  color: white;
+  font-size: 144px;
+  position: relative;
+  top: 15%;
+  margin-left: 50px;
+  max-width: 70%;
+
+
+}

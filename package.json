@@ -27,6 +27,7 @@
     "grunt-contrib-watch": "^0.6.1",
     "grunt-open": "^0.2.3",
     "load-grunt-tasks": "~3.4.1",
+    "rellax": "^1.6.2",
     "serve-static": "^1.10.2"
   },
   "scripts": {
